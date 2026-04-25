@@ -2,7 +2,7 @@
 
 Six concrete project ideas to inspire your own build. Each one names the failure mode it stresses, the tools that fit best, and what would make a strong demo.
 
-These are not templates — they're sketches. Pick one, remix two, or use them as ammunition for something else entirely.
+These are not templates - they're sketches. Pick one, remix two, or use them as ammunition for something else entirely.
 
 | # | Project | Failure mode it stresses |
 |---|---|---|
@@ -17,9 +17,9 @@ These are not templates — they're sketches. Pick one, remix two, or use them a
 
 ## 1. Meeting Discipline Keeper
 
-A bot that joins a meeting, tracks the agenda in real time, interrupts off-topic speakers, asks clarifying questions, and updates notes live. Over time, builds a memory of each participant — who runs late, who derails, who never speaks.
+A bot that joins a meeting, tracks the agenda in real time, interrupts off-topic speakers, asks clarifying questions, and updates notes live. Over time, builds a memory of each participant - who runs late, who derails, who never speaks.
 
-**What's hard:** Conference rooms are acoustically hostile. Overlapping speech, room echo, varying mic distances, background noise. STT breaks down exactly when the meeting is most chaotic — and that's when the bot needs to understand best.
+**What's hard:** Conference rooms are acoustically hostile. Overlapping speech, room echo, varying mic distances, background noise. STT breaks down exactly when the meeting is most chaotic - and that's when the bot needs to understand best.
 
 **Tools that fit:**
 - Agent framework: [Pipecat](https://github.com/pipecat-ai/pipecat) or [LiveKit Agents](https://github.com/livekit/agents)
@@ -36,7 +36,7 @@ A bot that joins a meeting, tracks the agenda in real time, interrupts off-topic
 
 A real-time multimodal voice coach (Gemini Live, OpenAI Realtime, etc.) that watches you exercise via camera, counts reps, corrects form, and motivates you mid-set.
 
-**What's hard:** The gym is one of the most hostile environments for voice AI — loud music, dropped weights, multiple people talking nearby. Without front-end audio cleanup, the model hears music more than the user.
+**What's hard:** The gym is one of the most hostile environments for voice AI - loud music, dropped weights, multiple people talking nearby. Without front-end audio cleanup, the model hears music more than the user.
 
 **Tools that fit:**
 - Realtime S2S model: [Gemini Live](https://ai.google.dev/gemini-api/docs/live) or [OpenAI Realtime API](https://platform.openai.com/docs/guides/realtime)
@@ -50,7 +50,7 @@ A real-time multimodal voice coach (Gemini Live, OpenAI Realtime, etc.) that wat
 
 ## 3. Voice-Controlled Language Learning Game
 
-A 2D game where the player controls their character only by speaking the language they're learning. Each level is a real-life scenario — ordering at a cafe, buying a train ticket — and NPCs respond naturally, forcing real conversation.
+A 2D game where the player controls their character only by speaking the language they're learning. Each level is a real-life scenario - ordering at a cafe, buying a train ticket - and NPCs respond naturally, forcing real conversation.
 
 **What's hard:** Language learners are the hardest STT users. Non-native pronunciation, hesitant speech, accent variation. Add a noisy classroom or home and standard STT misses badly enough to break the game loop.
 
@@ -58,17 +58,17 @@ A 2D game where the player controls their character only by speaking the languag
 - STT with strong multilingual support: [Whisper](https://github.com/openai/whisper) (large-v3 or turbo), [faster-whisper](https://github.com/SYSTRAN/faster-whisper)
 - Pronunciation scoring: WER vs. expected phrase, or use [SpeechBrain](https://github.com/speechbrain/speechbrain) phoneme recognizers for finer-grained feedback
 - LLM for NPC dialogue: any frontier model with a system prompt locking it to the target language
-- Game framework: anything you're already comfortable in — Phaser, Godot, plain HTML canvas
+- Game framework: anything you're already comfortable in - Phaser, Godot, plain HTML canvas
 
-**Strong demo angle:** Live audience plays a level. Show the WER score on screen — before and after enhancement — so they see the recognition improve in real time.
+**Strong demo angle:** Live audience plays a level. Show the WER score on screen - before and after enhancement - so they see the recognition improve in real time.
 
 ---
 
 ## 4. The "Rema 1000" Smart Home
 
-Inspired by the [Norwegian supermarket ad](https://www.youtube.com/watch?v=nwPtcqcqz00) where a man's voice-controlled smart home becomes unusable after a dentist visit because his speech is slurred. Build a voice-controlled environment and prove voice control still works when the speaker is impaired — mumbling, illness, whispering, post-anaesthesia, non-native accents.
+Inspired by the [Norwegian supermarket ad](https://www.youtube.com/watch?v=nwPtcqcqz00) where a man's voice-controlled smart home becomes unusable after a dentist visit because his speech is slurred. Build a voice-controlled environment and prove voice control still works when the speaker is impaired - mumbling, illness, whispering, post-anaesthesia, non-native accents.
 
-**What's hard:** Most voice AI tests failure from *the environment* (background noise). This one tests failure from *the speaker themselves*. Different problem, different fix — input speech needs to be clarified, not just denoised.
+**What's hard:** Most voice AI tests failure from *the environment* (background noise). This one tests failure from *the speaker themselves*. Different problem, different fix - input speech needs to be clarified, not just denoised.
 
 **Tools that fit:**
 - Smart home simulator: a simple web UI with toggleable lights / locks / thermostat is plenty for a demo
@@ -78,20 +78,20 @@ Inspired by the [Norwegian supermarket ad](https://www.youtube.com/watch?v=nwPtc
 
 **Strong demo angle:** Side-by-side. Same commands, two pipelines. One fails comically (turn on bathroom light → "playing Bathroom by Lana Del Rey"), the other succeeds. Bonus: re-enact the ad.
 
-**Accessibility angle:** This isn't just funny — it's the right framing for elderly users, people with speech impediments, and non-native speakers, who are systematically excluded by current voice AI.
+**Accessibility angle:** This isn't just funny - it's the right framing for elderly users, people with speech impediments, and non-native speakers, who are systematically excluded by current voice AI.
 
 ---
 
 ## 5. Private Local Voice Agent (Edge AI)
 
-A fully offline voice agent running on a Raspberry Pi or similar — no cloud, no API keys, no data leaving the device. Useful for privacy-sensitive deployments (healthcare, security, kids' devices).
+A fully offline voice agent running on a Raspberry Pi or similar - no cloud, no API keys, no data leaving the device. Useful for privacy-sensitive deployments (healthcare, security, kids' devices).
 
-**What's hard:** Everything has to run small. Small STT, small LLM, small enhancement model, small TTS. And the audio quality is usually worse — cheap mics, no acoustic treatment.
+**What's hard:** Everything has to run small. Small STT, small LLM, small enhancement model, small TTS. And the audio quality is usually worse - cheap mics, no acoustic treatment.
 
 **Tools that fit:**
 - Lightweight STT: [whisper.cpp](https://github.com/ggerganov/whisper.cpp) (`tiny` or `base.en`), [faster-whisper](https://github.com/SYSTRAN/faster-whisper) with int8 quantization
 - Lightweight LLM: [llama.cpp](https://github.com/ggerganov/llama.cpp) with a 1B–4B parameter model, [Ollama](https://ollama.com/) for ease
-- Lightweight TTS: [piper](https://github.com/rhasspy/piper) — runs comfortably on a Pi
+- Lightweight TTS: [piper](https://github.com/rhasspy/piper) - runs comfortably on a Pi
 - Lightweight VAD: [silero-vad](https://github.com/snakers4/silero-vad)
 - Lightweight enhancement: [RNNoise](https://github.com/xiph/rnnoise), [DeepFilterNet](https://github.com/Rikorose/DeepFilterNet) (Rust runtime)
 - Wake word: [openWakeWord](https://github.com/dscripka/openWakeWord)
@@ -104,7 +104,7 @@ A fully offline voice agent running on a Raspberry Pi or similar — no cloud, n
 
 Less of an app, more of a diagnostic tool. Systematically rank where a voice pipeline breaks. Measure how much audio quality alone degrades results. Measure how much enhancement recovers. Quantify how STT model and LLM choice compound the problem.
 
-**What's hard:** This isn't a build challenge — it's a measurement challenge. The contribution is a clear, reproducible answer to "where does voice break first?"
+**What's hard:** This isn't a build challenge - it's a measurement challenge. The contribution is a clear, reproducible answer to "where does voice break first?"
 
 **Tools that fit:**
 - Quality metrics: [VERSA](https://github.com/wavlab-speech/versa), [DNSMOS](https://github.com/microsoft/DNS-Challenge/tree/master/DNSMOS), [NISQA](https://github.com/gabrielmittag/NISQA)

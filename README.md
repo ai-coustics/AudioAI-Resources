@@ -1,6 +1,6 @@
 # Voice in the Wild
 
-An open-source resource hub for builders working on **voice AI that holds up outside the lab** — noisy rooms, bad mics, slurred speech, overlapping speakers, hostile environments.
+An open-source resource hub for builders working on **voice AI that holds up outside the lab** - noisy rooms, bad mics, slurred speech, overlapping speakers, hostile environments.
 
 Originally curated for the [Big Berlin Hack 2026](https://luma.com/bigberlinhack) "Voice Interface in the Wild" track, but useful for anyone shipping voice apps to the real world.
 
@@ -18,11 +18,11 @@ Originally curated for the [Big Berlin Hack 2026](https://luma.com/bigberlinhack
 
 > Voice-driven apps work flawlessly in the lab but fall apart the moment they meet the real world. Background chatter, low-quality microphones, slurred speech, and unpredictable environments kill the user experience. Most teams discover these failures only after shipping.
 
-**Build a voice-driven application that survives real-world harsh audio conditions.** Pick your own adventure — agent, game, hardware, robot — and prove your app holds up when the environment fights back.
+**Build a voice-driven application that survives real-world harsh audio conditions.** Pick your own adventure - agent, game, hardware, robot - and prove your app holds up when the environment fights back.
 
 ## If you only install one thing
 
-[**VERSA**](https://github.com/wavlab-speech/versa) — a unified evaluation CLI that wraps DNSMOS, UTMOS, PLCMOS, PESQ, STOI, VISQOL, WER, and speaker similarity behind a single command. Gets you 80% of the way to a quality dashboard.
+[**VERSA**](https://github.com/wavlab-speech/versa) - a unified evaluation CLI that wraps DNSMOS, UTMOS, PLCMOS, PESQ, STOI, VISQOL, WER, and speaker similarity behind a single command. Gets you 80% of the way to a quality dashboard.
 
 ## Recommended starter stack
 
@@ -52,4 +52,4 @@ PRs welcome. See [`CONTRIBUTING.md`](./CONTRIBUTING.md). Broken links, missing t
 
 ## License
 
-MIT — see [`LICENSE`](./LICENSE). Curated descriptions and structure are MIT-licensed; linked tools retain their own licenses (check before shipping).
+MIT - see [`LICENSE`](./LICENSE). Curated descriptions and structure are MIT-licensed; linked tools retain their own licenses (check before shipping).

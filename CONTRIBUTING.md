@@ -1,13 +1,13 @@
 # Contributing
 
-Thanks for considering a contribution. This is a curated resource hub, not a framework — the bar for adding things is lower than for code repos, but the bar for *useful* things is higher.
+Thanks for considering a contribution. This is a curated resource hub, not a framework - the bar for adding things is lower than for code repos, but the bar for *useful* things is higher.
 
 ## What's welcome
 
 - **A new tool** that fits an existing category in [`TOOLKIT.md`](./TOOLKIT.md).
 - **A fix to a broken link** or out-of-date description.
 - **A better one-liner** for an existing entry.
-- **A new example project** in [`examples/`](./examples/) — especially based on something you actually built.
+- **A new example project** in [`examples/`](./examples/) - especially based on something you actually built.
 - **A new dataset** in [`DATASETS.md`](./DATASETS.md), particularly anything covering languages or speakers underrepresented in the current list.
 - **Stress-test recipes** for [`quality-dashboard/`](./quality-dashboard/) that other people will reach for.
 
@@ -23,7 +23,7 @@ Thanks for considering a contribution. This is a curated resource hub, not a fra
 - One line per tool. Repo link, em-dash, what it does, why it's notable.
 - Lower-case the tool name if that's how it's written in its README.
 - Cite a paper or benchmark when you're calling something "SOTA".
-- British / American spelling — match the file you're editing.
+- British / American spelling - match the file you're editing.
 
 ## How to submit
 
